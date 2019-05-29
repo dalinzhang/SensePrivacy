@@ -44,7 +44,7 @@ def creat_time_series(sub_info, data_dir, num_features, num_labels, label_codes,
 
 
 def time_series_to_section(dataset, num_labels, sliding_window_size, step_size_of_sliding_window,
-                           standardize=False, num_features, **options):
+                           num_features, standardize=False, **options):
     data = dataset[:, 0:-sum(num_labels.values())]
 
     act_labels = dataset[:, num_features : num_features + num_labels['activity']]
